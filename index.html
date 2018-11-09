@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+    New Perspectives on HTML5 and CSS3, 7th Edition
+    Tutorial 4
+    Case Problem 4
+    
+    Browyer Realty Listing 2048
+    Author: Ethan Gruenemeier
+    Date: 11.9.18
+
+    Filename: index.html
+   -->
+    <title>Browyer Realty</title>
+    <!-- links for css style sheets -->
+    <link rel="stylesheet" href="br_reset.css" />
+    <link rel="stylesheet" href="br_styles.css" />
+    <script src="mainJS.js"></script>
+</head>
+
+<body>
+    <header>
+        <ul id="topnav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Residential</a></li>
+            <li><a href="#">Business</a></li>
+            <li><a href="#">Properties</a></li>
+            <li><a href="#">Rentals</a></li>
+            <li><a href="#">Appraisals</a></li>
+        </ul>
+    </header>
+    <article>
+        <img src="br_logo.png" alt="logo" class="center" />
+        <hr>
+        <h2>Listing 20481</h2>
+        <!-- image slideshow Gallery  -->
+        <div class="container">
+            <div class="Images" id="mainImg">
+                <div class="numText"> 1/9 </div>
+                <img src="br_photo1.png" alt="front" class="imgGallery" />
+            </div>
+            <div class="Images">
+                <div class="numText"> 2/9 </div>
+                <img src="br_photo2.png" alt="rear" class="imgGallery" />
+            </div>
+            <div class="Images">
+                <div class="numText"> 3/9 </div>
+                <img src="br_photo3.png" alt="side" class="imgGallery" />
+            </div>
+            <div class="Images">
+                <div class="numText"> 4/9 </div>
+                <img src="br_photo4.png" alt="Dining Room" class="imgGallery" />
+            </div>
+            <div class="Images">
+                <div class="numText"> 5/9 </div>
+                <img src="br_photo5.png" alt="Kitchen" class="imgGallery" />
+            </div>
+            <div class="Images">
+                <div class="numText"> 6/9 </div>
+                <img src="br_photo6.png" alt="Living Room" class="imgGallery" />
+            </div>
+            <div class="Images">
+                <div class="numText"> 7/9 </div>
+                <img src="br_photo7.png" alt="bedroom1" class="imgGallery" />
+            </div>
+            <div class="Images">
+                <div class="numText"> 8/9 </div>
+                <img src="br_photo8.png" alt="bedroom2" class="imgGallery" />
+            </div>
+            <div class="Images">
+                <div class="numText"> 9/9 </div>
+                <img src="br_photo9.png" alt="bedroom3" class="imgGallery" />
+            </div>
+            <!-- next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Image text -->
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+            <!-- Thumbnail images -->
+            <div class="row">
+                <div class="column">
+                    <img class="thumbnail cursor" src="br_photo1.png" class="imgGallery" onclick="currentSlide(1)" alt="Front" />
+                </div>
+                <div class="column">
+                    <img class="thumbnail cursor" src="br_photo2.png" class="imgGallery" onclick="currentSlide(2)" alt="Rear" />
+                </div>
+                <div class="column">
+                    <img class="thumbnail cursor" src="br_photo3.png" class="imgGallery" onclick="currentSlide(3)" alt="Side" />
+                </div>
+                <div class="column">
+                    <img class="thumbnail cursor" src="br_photo4.png" class="imgGallery" onclick="currentSlide(4)" alt="Dining Room" />
+                </div>
+                <div class="column">
+                    <img class="thumbnail cursor" src="br_photo5.png" class="imgGallery" onclick="currentSlide(5)" alt="Kitchen" />
+                </div>
+                <div class="column">
+                    <img class="thumbnail cursor" src="br_photo6.png" class="imgGallery" onclick="currentSlide(6)" alt="Living Room" />
+                </div>
+                <div class="column">
+                    <img class="thumbnail cursor" src="br_photo7.png" class="imgGallery" onclick="currentSlide(7)" alt=" First Bedroom" />
+                </div>
+                <div class="column">
+                    <img class="thumbnail cursor" src="br_photo8.png" class="imgGallery" onclick="currentSlide(8)" alt=" Second Bedroom" />
+                </div>
+                <div class="column">
+                    <img class="thumbnail cursor" src="br_photo9.png" class="imgGallery" onclick="currentSlide(9)" alt="Third Bedroom" />
+                </div>
+
+            </div>
+        </div>
+        </div>
+        <h3>About this Listing</h3>
+        <p>Paradise found! This custom-built brand new home sits proudly on a 6.8-acre
+            high wooded site overlooking a 300-acre nature conservancy. The setting is
+            exceptional, and the home is every bit as exciting! A bright, open layout is
+            enhanced by vaulted ceilings, hardwood and tumbled, ceramic flooring, custom
+            maple cabinetry, upgraded fixtures, numerous windows, and incredible views.</p>
+        <p>There is much more. The property includes a 40x54 storage building - perfect
+            for a large boat and machinery. An exposed walkout on lower level leads down to
+            a beautiful wooded area.</p>
+        <p>An extra bathroom, bedroom, and family room can be added to the unfinished
+            basement for more living space.</p>
+        <aside>
+            <h3>Information</h3>
+            <p>Address:</p>
+            <p>Listing 2048</p>
+            <p>414 Mandel Road</p>
+            <p>Owatonna, MN 55060</p>
+            <br>
+            <p>List Price: $412,800</p>
+            <p>Square Feet: 3,300</p>
+            <p>Bedrooms: 4</p>
+            <p>Baths: 2-1/2</p>
+        </aside>
+    </article>
+</body>
+
+</html>

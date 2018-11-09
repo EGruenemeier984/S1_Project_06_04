@@ -1,0 +1,181 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 4
+   Case Problem 4
+   
+   Browyer Realty Layout Styles
+   Author: Ethan Gruenemeier 
+   Date: 11.9.18
+	
+   Filename: br_styles.css
+
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: url('br_paper.png') fixed;
+}
+
+body {
+    max-width: 1100px;
+    min-width: 700px;
+    width: 100%;
+    margin: auto;
+}
+
+#topnav {
+    display: grid;
+    grid-template-columns: repeat(6, .25fr);
+    padding-bottom: 100px;
+    z-index: 99;
+}
+
+ul#topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #E8CEAF;
+}
+
+ul#topnav li {
+    float: left;
+}
+
+ul#topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0.8em 1em;
+    text-decoration: none;
+}
+
+ul#topnav li.right {
+    float: right;
+}
+
+ul#topnav li a:hover:not(.active) {
+    background-color: #111;
+}
+
+ul#topnav li a.current {
+    background-color: #333030;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+hr {
+    width: 75%;
+}
+
+h2 {
+    font-size: 1.45em;
+    margin: 0.2em;
+}
+
+h3 {
+    font-size: 1em;
+}
+
+#mainImg {
+    display: block;
+}
+
+.imgGallery {
+    width: 100%;
+}
+
+.container {
+    position: relative;
+    width: 50%;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.Images {
+    display: none;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numText {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Six columns side by side */
+.column {
+    float: left;
+    width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.thumbnail {
+    opacity: 0.6;
+    width: 80%;
+}
+
+.active,
+.thumbnail:hover {
+    opacity: 1;
+}
