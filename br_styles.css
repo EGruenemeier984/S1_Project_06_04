@@ -98,6 +98,7 @@ h3 {
 .container {
     position: relative;
     width: 50%;
+    float: left;
 }
 
 img {
@@ -157,7 +158,7 @@ img {
     color: white;
 }
 
-.row:after {
+.row::after {
     content: "";
     display: table;
     clear: both;
@@ -179,3 +180,32 @@ img {
 .thumbnail:hover {
     opacity: 1;
 }
+
+.rightcol{
+    float: right;
+    width: 45%;
+}
+
+aside{
+    background-color: #E8CEAF;
+    padding: 1em;
+    border-radius: 15px;
+    box-shadow: #111 4px 4px 1px;
+}
+
+#asideright{
+    float: right;
+    width: 50%;
+}
+
+#asideleft{
+    float: left;
+    width: 50%;
+}
+
+aside{
+    content: "";
+    clear: both;
+    display: table;
+}
+
