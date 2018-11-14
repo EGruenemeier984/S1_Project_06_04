@@ -12,29 +12,33 @@
    Filename: br_styles.css
 
 */
-
+/* make sures all the box sizing is set to border box */
 * {
     box-sizing: border-box;
 }
 
+/* This makes the background the image and ensures that it is fixed so it doesn't scroll with the page. */
 html {
     background: url('br_paper.png') fixed;
 }
 
+/* This affectst the body and makes the content centered by defining the max and min widths and then setting the margins to auto, finally the font family is selected. */
 body {
     max-width: 1100px;
     min-width: 700px;
     width: 100%;
     margin: auto;
+    font-family: 'Cuprum', sans-serif;
 }
 
+/* This affects the topnav id and sets the display to grid and the columns are all .2 fr units. The bottom padding is set to 100px.*/
 #topnav {
     display: grid;
-    grid-template-columns: repeat(6, .25fr);
+    grid-template-columns: repeat(6, .2fr);
     padding-bottom: 100px;
-    z-index: 99;
 }
 
+/* This affects the unordered lists with the id topnav and makes the discs disappear, margins and padding is set to 0 and the overflow is hidden. The background color is set to a hex value. */
 ul#topnav {
     list-style-type: none;
     margin: 0;
@@ -43,27 +47,33 @@ ul#topnav {
     background-color: #E8CEAF;
 }
 
+/* This affects the anchor tags in list items in unordered lists with the id topnav and makes the display block, the color a hex value and aligns the text centered and the padding is set to 0.8em on the top and bottom and 1em on the left and right. The text decoration is set to none so that the underline is gone. */
 ul#topnav li a {
     display: block;
-    color: white;
+    color: #111;
     text-align: center;
     padding: 0.8em 1em;
     text-decoration: none;
 }
 
+/* This affects the list items with the class right thats in the unordered lists with the id of topnav. This floats all the content right. */
 ul#topnav li.right {
     float: right;
 }
 
+/* this affects the anchor tags that are hovered on but not active that are in an unorderlist with the id of topnav and sets the background to a hex value and scales the text. */
 ul#topnav li a:hover:not(.active) {
-    background-color: rgb(44, 43, 43);
+    background-color: #B7A28F;
     transform: scale(1.2);
+    transition: .5s;
 }
 
+/* This affects the anchor tags with the class of current that are in list itames that are in unordered lists with the id of topnav. sets the background color to a hex value. */
 ul#topnav li a.current {
     background-color: #333030;
 }
 
+/* This affects evreything with the class of center and sets the display to block and the margins to auto with a width of 50% so that the content is centered. */
 .center {
     display: block;
     margin-left: auto;
@@ -71,45 +81,54 @@ ul#topnav li a.current {
     width: 50%;
 }
 
+/* This affects all h2 tags and makes the font size 1.45ems and the margins are set 0.5em and a text shadow is put on the h2 */
 h2 {
     font-size: 1.45em;
     margin: 0.5em;
     text-shadow: rgb(71, 71, 71) 3px 2px 5px;
 }
 
+/* This affects the h3 tags and the font size is set to 1.1em and the top margin is set to 0.5em. */
 h3 {
     font-size: 1.1em;
     margin-top: 0.5em;
 }
 
+/* This affects the content with the id of mainImg and makes the display block. */
 #mainImg {
     display: block;
 }
 
+/* this affects evreything with the id of imgGallery and makes the width 100%. */
 .imgGallery {
     width: 100%;
 }
 
+/* This affects the content with the class of container and sets the position to relative, width to 50%, and then floats content to the left. */
 .container {
     position: relative;
     width: 50%;
     float: left;
 }
 
+/* this affects all images and vertically alligns the images to the middle. */
 img {
     vertical-align: middle;
 }
 
+/* This affects the content with Images class and sets the display to none, also adds a border, saturation, and brightness. */
 .Images {
     display: none;
     border: outset 5px rgb(71, 71, 71);
-    filter: saturate(1);
+    filter: saturate(2) brightness(1.5);
 }
 
+/* This affects the content with the class of cursor and sets the cursor to pointer. */
 .cursor {
     cursor: pointer;
 }
 
+/* This affects the content with classes of prev and next and sets the cursor to pointer, the position to absolute, top to 40%, width to auto, padding is set to 16px , the top margins are set to -50px, the color is set to white, the font is set to 20px and the the radius of the border is 3px in both directions. */
 .prev,
 .next {
     cursor: pointer;
@@ -155,6 +174,7 @@ img {
     color: white;
 }
 
+/* This prevents container collapse in the row class. */
 .row::after {
     content: "";
     display: table;
@@ -173,16 +193,19 @@ img {
     width: 80%;
 }
 
+/* This affects the active and thumbnail class when user hovers and sets opacity to 1. */
 .active,
 .thumbnail:hover {
     opacity: 1;
 }
 
+/* Affects the class of rightcol and floats col to right and sets width to 45%. */
 .rightcol {
     float: right;
     width: 45%;
 }
 
+/* This affects the aside tag and sets background to a radial graidient and adds a border shadow. */
 aside {
     background: radial-gradient(white, #E8CEAF);
     padding: 1em;
@@ -190,22 +213,26 @@ aside {
     box-shadow: #111 4px 4px 1px;
 }
 
+/* This affects the aside right id and makes the content float right and the width is set to 50%.  */
 #asideright {
     float: right;
     width: 50%;
 }
 
+/* This affects the aside left and then floats the content to the left and sets width to 50%. */
 #asideleft {
     float: left;
     width: 50%;
 }
 
+/* This affects the aside tag after the contetn and prevents container collapse. */
 aside::after {
     content: "";
     clear: both;
     display: table;
 }
 
+/* This affects the footer and clears the floats from both sides and aligns the text to the center and the background is set to a linear graidient and then the corners are rounded. */
 footer {
     clear: both;
     text-align: center;
@@ -215,16 +242,40 @@ footer {
     border: 5px solid rgb(71, 71, 71);
 }
 
+/* Affects the anchor tags in the unordered list that is directly nested in the footer. changes color to a hex value and the text decoration is set to none. */
 footer>ul a {
     color: #111;
     text-decoration: none;
 }
 
+/* This affects the anchor tags that are hovered on by user in the unordered list nested in the footer and sets the color ti a hex value and the text decoration is set to underline. */
 footer>ul a:hover {
     color: #f2f2f2;
     text-decoration: underline;
 }
 
+/* This affects all p tags and sets the indent to 1.2 ems. */
 p {
     text-indent: 1.2em;
+}
+
+/* width of the scrollbar is set to 15 pixels.*/
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* affects the track of the scrollbar and sets the backgoround color to a hex value.*/
+::-webkit-scrollbar-track {
+    background: #dddddd;
+}
+
+/* affects the Handle of the scrollbar and sets the background color to a hex value plus sets the border radius to 10px*/
+::-webkit-scrollbar-thumb {
+    background: #B7A28F;
+    border-radius: 10px;
+}
+
+/* affects the Handle on hover by the user and sets the background color to a hex value. */
+::-webkit-scrollbar-thumb:hover {
+    background: #E8CEAF;
 }
