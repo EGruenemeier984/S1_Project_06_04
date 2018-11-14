@@ -64,7 +64,9 @@ ul#topnav li.right {
 /* this affects the anchor tags that are hovered on but not active that are in an unorderlist with the id of topnav and sets the background to a hex value and scales the text. */
 ul#topnav li a:hover:not(.active) {
     background-color: #B7A28F;
+    -webkit-transform: scale(1.2);
     transform: scale(1.2);
+    -webkit-transition: .5s;
     transition: .5s;
 }
 
@@ -120,6 +122,7 @@ img {
 .Images {
     display: none;
     border: outset 5px rgb(71, 71, 71);
+    -webkit-filter: saturate(2) brightness(1.5);
     filter: saturate(2) brightness(1.5);
 }
 
